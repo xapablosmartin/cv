@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+    font-family: "Varela Round", sans-serif;
   font-size: 16px;
   line-height: 1.5em;
 }
@@ -29,10 +29,7 @@ a {
   clear: both;
 }
 
-.bold {
-  color: #4a4e51;
-  font-weight: 400;
-}
+
 
 .resume-wrapper {
   position: relative;
@@ -41,12 +38,12 @@ a {
 }
 
 .container {
-  min-height: 425px;
+  min-height: 400px;
 }
 
 .btn-container {
-  display: flex; /* Utiliser le modèle flexbox */
-  justify-content: flex-end; /* Aligner le contenu à droite */
+  display: flex; 
+  justify-content: flex-end; 
 
 }
 
@@ -55,28 +52,32 @@ a {
   padding: 10px 20px;
   font-size: 16px; 
   color: #fff; 
-  background-color: #66cc99; /* Couleur de fond */
-  border: none; /* Pas de bordure */
-  border-radius: 5px; /* Coins arrondis */
-  text-decoration: none; /* Pas de soulignement */
-  text-align: center; /* Centrer le texte */
-  transition: background-color 0.3s; /* Transition pour le survol */
+  background-color: #66cc99; 
+  border: none; 
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #57b89b; /* Couleur de fond au survol */
+  background-color: #57b89b; 
 }
 
 .profile {
   background: #fff;
   width: 40%;
   float: left;
-  color: #9099a0;
+  color: #666b6f;
 }
 @media (max-width: 850px) {
   .profile {
     width: 100%;
   }
+}
+.bold {
+  color: #4a4e51;
+  font-weight: 400;
+  font-size:larger;
 }
 .profile .name-wrapper {
   float: left;
@@ -195,7 +196,6 @@ a {
 .profile .list-titles {
   float: left;
   width: 40%;
-  color: #4a4e51;
   font-size: 1.6em;
 
 
@@ -213,7 +213,7 @@ a {
   margin-bottom: 20px;
 }
 .profile .contact-presentation p {
-  text-indent: 2em; /* Ajustez la valeur selon vos besoins */
+  text-indent: 2em; 
 }
 
 .profile svg {
@@ -231,7 +231,7 @@ a {
   width: 60%;
   float: left;
   position: relative;
-  color: #9099a0;
+  color: #b7c3cc;
   font-weight: 300;
   min-height: 100%;
   min-height: 100vh;
@@ -307,7 +307,7 @@ a {
   width: 50%;
   float: left;
   text-align: left;
-  color: #9099a0;
+  color: #ffffff;
   font-weight: 300;
   margin-bottom: 20px;
 }
@@ -318,6 +318,9 @@ a {
 }
 .section-wrapper:nth-child(1) {
   padding-right: 8%;
+}
+.section-wrapper:nth-child(3) {
+  width: 100%;
 }
 .section-wrapper h3.section-title {
   color: #66cc99;
@@ -351,34 +354,41 @@ a {
 }
 .section-wrapper .skill-percentage:nth-child(1)::before {
   width: 65%;
-  -webkit-animation: skill_1 1.2s ease;
-          animation: skill_1 1.2s ease;
+  -webkit-animation: skill_1 1.8s ease;
+          animation: skill_1 1.8s ease;
 }
 .section-wrapper .skill-percentage:nth-child(2)::before {
   width: 50%;
-  -webkit-animation: skill_2 1.2s ease;
-          animation: skill_2 1.2s ease;
+  -webkit-animation: skill_2 1.8s ease;
+          animation: skill_2 1.8s ease;
 }
 .section-wrapper .skill-percentage:nth-child(3)::before {
   width: 50%;
-  -webkit-animation: skill_3 1.2s ease;
-          animation: skill_3 1.2s ease;
+  -webkit-animation: skill_3 1.8s ease;
+          animation: skill_3 1.8s ease;
 }
 .section-wrapper .skill-percentage:nth-child(4)::before {
   width: 50%;
-  -webkit-animation: skill_4 1.2s ease;
-          animation: skill_4 1.2s ease;
+  -webkit-animation: skill_4 1.8s ease;
+          animation: skill_4 1.8s ease;
 }
 .section-wrapper .skill-percentage:nth-child(5)::before {
   width: 65%;
-  -webkit-animation: skill_5 1.2s ease;
-          animation: skill_5 1.2s ease;
+  -webkit-animation: skill_5 1.8s ease;
+          animation: skill_5 1.8s ease;
 }
 .section-wrapper .skill-percentage:nth-child(6)::before {
-  width: 20%;
-  -webkit-animation: skill_6 1.2s ease;
-          animation: skill_6 1.2s ease;
+  width: 40%;
+  -webkit-animation: skill_6 1.8s ease;
+          animation: skill_6 1.8s ease;
 }
+
+.section-wrapper .skill-percentage:nth-child(7)::before {
+  width: 40%;
+  -webkit-animation: skill_7 1.8s ease;
+          animation: skill_7 1.8s ease;
+}
+
 
 
 @-webkit-keyframes skill_1 {
@@ -467,7 +477,7 @@ a {
     width: 0%;
   }
   to {
-    width: 20%;
+    width: 40%;
   }
 }
 @keyframes skill_6 {
@@ -475,55 +485,125 @@ a {
     width: 0%;
   }
   to {
-    width: 20%;
+    width: 40%;
+  }
+}
+
+@-webkit-keyframes skill_7 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
+  }
+}
+@keyframes skill_7 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%;
   }
 }
 
 
-.skills-section {
-  
+.skills-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Varela Round", sans-serif;
+  color: white;
   background-color: #66cc99;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
   max-width: 400px;
   box-shadow: 0 4px 8px rgba(175, 175, 175, 0.5);
+  
+  
 }
 
-.skills-carousel {
+.word-rotate-y  {
+  height: 3em;
   position: relative;
-  height: 40px;
-  max-width: 400px;
-}
-
-.skill-item {
-  font-family: "Varela Round", sans-serif;
-  font-size: 1.2em;
-  color: #fff;
-  opacity: 0;
-  animation: fadeInOut 3s infinite;
-  position: absolute;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}
+.word-rotate-y > li {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  filter: opacity(0);
+  animation: rotate-y 32s infinite cubic-bezier(.7,.2,0,1);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* values are neg so that it is already playing once loaded */
+.word-rotate-y > li:nth-child(2) {
+  animation-delay: -4s;
+}
+.word-rotate-y > li:nth-child(3) {
+  animation-delay: -8s;
+}
+.word-rotate-y > li:nth-child(4) {
+  animation-delay: -12s;
+}
+.word-rotate-y > li:nth-child(5) {
+  animation-delay: -16s;
+}
+.word-rotate-y > li:nth-child(6) {
+  animation-delay: -20s;
+}
+.word-rotate-y > li:nth-child(7) {
+  animation-delay: -24s;
+}
+.word-rotate-y > li:nth-child(8) {
+  animation-delay: -28s;
 }
 
-@keyframes fadeInOut {
-  0%, 10% {
-    opacity: 0;
-    transform: translateY(20px);
+@keyframes rotate-y {
+  0%, 100% {
+    transform: translateY(0%) scale(1.2);
+    filter: opacity(1);
+    z-index: 2;
   }
-  10%, 90% {
-    opacity: 1;
-    transform: translateY(0);
+  12.5% {
+    transform: translateY(40%);
+    filter: blur(0px) opacity(.7);
   }
-  90%, 100% {
-    opacity: 0;
-    transform: translateY(-20px);
+  25% {
+    transform: translateY(50%) scale(.8);
+    filter: blur(2px) opacity(.5);
+  }
+  37.5% {
+    transform: translateY(40%) scale(.65);
+    filter: blur(4px) opacity(.3);
+    z-index: -1;
+  }
+  50% {
+    transform: translateY(0%) scale(.5);
+    filter: blur(8px) opacity(.3);
+    z-index: -1;
+  }
+  62.5% {
+    transform: translateY(-40%) scale(.65);
+    filter: blur(4px) opacity(.3);
+    z-index: -1;
+  }
+  75% {
+    transform: translateY(-50%) scale(.8);
+    filter: blur(2px) opacity(.5);
+  }
+  87.5% {
+    transform: translateY(-40%);
+    filter: blur(0px) opacity(.7);
+    z-index: 2;
   }
 }
-
 .skill-print {
   font-family: "Varela Round", sans-serif; /* Même police */
   font-size: 0.9em; /* Taille de police plus petite */
@@ -571,6 +651,21 @@ a {
 
 .bubble.filled {
   background-color: #66cc99;
+}
+
+
+@media print {
+  body {
+    font-size: 22px; /* Taille de police pour l'impression */
+}
+
+.container:nth-of-type(2) {
+  margin-top: 150px;
+}
+  /* Cachez des éléments que vous ne souhaitez pas imprimer */
+  .btn-container {
+      display: none; /* Ne pas afficher le bouton lors de l'impression */
+  }
 }
 
 

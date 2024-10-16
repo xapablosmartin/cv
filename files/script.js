@@ -1,14 +1,4 @@
-const skills = [
-  'Résolution de problèmes',
-  'Adaptabilité',
-  'Communication',
-  'Esprit d’apprentissage continu',
-  'Travail d\'équipe',
-  'Gestion des priorités',
-  'Esprit critique',
-  'Soin aux détails',
-  'Autonomie'
-];
+
 
 $(document).ready(function() {
   // Fonction pour sélectionner un élément avec jQuery
@@ -25,7 +15,7 @@ $(document).ready(function() {
   var tl = new TimelineMax();
 
   // Boucle pour animer les bulles
-  for (var i = 0; i < 11; i++) { // Assurez-vous que la boucle correspond au nombre de bulles
+  for (var i = 0; i < 11; i++) { 
       var bubble = select('.bubble' + i);
       if (bubble.length) { // Vérifie si l'élément existe
           var t = TweenMax.to(bubble, randomBetween(1, 1.5), {
@@ -45,20 +35,6 @@ $(document).ready(function() {
 
   tl.seek(50);
 
-  let currentSkillIndex = 0;
-  const $skillItem = $('#skill-item');
-
-  // Fonction pour mettre à jour la compétence affichée
-  function updateSkill() {
-    $skillItem.html(skills[currentSkillIndex]);
-    currentSkillIndex = (currentSkillIndex + 1) % skills.length;
-  }
-
-  // Changer la compétence toutes les 3 secondes
-  setInterval(updateSkill, 3000);
-
-
-
 
   select('.language-item').each(function() {
     const level = parseInt(select(this).data('level'));
@@ -76,12 +52,8 @@ $(document).ready(function() {
 
   
 
-  // Événement pour le bouton d'impression
-  $('#print').on('click', function() {
-    // Attendre que le contenu dynamique soit affiché
-    setTimeout(() => {
-      printCV();
-    }, 2000); // Ajustez le délai si nécessaire pour donner le temps à l'animation
-  });
+  select('#print-button').on('click', function() {
+    window.print(); 
+});
 
 });

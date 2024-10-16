@@ -604,15 +604,6 @@ a {
     z-index: 2;
   }
 }
-.skill-print {
-  font-family: "Varela Round", sans-serif; /* Même police */
-  font-size: 0.9em; /* Taille de police plus petite */
-  color: #fff; /* Couleur de texte blanche */
-  margin: 10px 0; /* Espacement entre les compétences */
-  
-
-  
-}
 
 
 .language-section {
@@ -658,11 +649,9 @@ a {
   body {
     font-size: 22px; /* Taille de police pour l'impression */
 }
-
 .container:nth-of-type(2) {
   margin-top: 150px;
 }
-  /* Cachez des éléments que vous ne souhaitez pas imprimer */
   .btn-container {
       display: none; /* Ne pas afficher le bouton lors de l'impression */
   }

@@ -52,8 +52,8 @@ $(document).ready(function() {
 
   
 
-//   select('#print-button').on('click', function() {
-//     window.print(); 
-// });
+  select('#print-button').on('click', function() {
+    window.print(); 
+});
 
 });

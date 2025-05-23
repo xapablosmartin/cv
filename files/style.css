@@ -65,7 +65,7 @@ a {
 
 .profile {
   background: #fff;
-  width: 40%;
+  width: 30%;
   float: left;
   color: #666b6f;
 }
@@ -81,7 +81,7 @@ a {
 }
 .profile .name-wrapper {
   float: left;
-  width: 60%;
+  width: 80%;
 }
 .profile h1 {
   font-size: 2em;
@@ -228,7 +228,7 @@ a {
 
 .experience {
   background: #3d3e42;
-  width: 60%;
+  width: 70%;
   float: left;
   position: relative;
   color: #b7c3cc;
@@ -368,7 +368,7 @@ a {
           animation: skill_3 1.8s ease;
 }
 .section-wrapper .skill-percentage:nth-child(4)::before {
-  width: 50%;
+  width: 75%;
   -webkit-animation: skill_4 1.8s ease;
           animation: skill_4 1.8s ease;
 }
@@ -453,7 +453,7 @@ a {
     width: 0%;
   }
   to {
-    width: 50%;
+    width: 75%;
   }
 }
 @-webkit-keyframes skill_5 {
